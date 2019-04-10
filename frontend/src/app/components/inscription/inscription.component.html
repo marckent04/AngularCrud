@@ -1,0 +1,53 @@
+<div class="container">
+        <h1 class="text-center">Inscription d'utilisateur</h1>
+    <div class="row">
+		<form  class="offset-md-3 col-md-6" (ngSubmit)="onSubmit(inscription)" #inscription="ngForm">
+			<div class="form-group">
+				<label for="name">Nom</label>
+				<input type="text" name="name" id="name" class="form-control" ngModel required>
+			</div>
+			<div class="form-group">
+				<label for="fname">Prenoms</label>
+				<input type="text" name="fname" id="fname" class="form-control" ngModel required>
+			</div>
+			<div class="form-group">
+				<label for="birth">Date de naissance</label>
+				<input type="date" name="birth" id="birth" class="form-control" ngModel required>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-6">
+						<input type="radio" name="gender" value="Homme" checked="checked" id="Homme" ngModel required>
+						<label for="Homme">homme</label>
+					</div>
+					<div class="col-6">
+						<input type="radio" name="gender" value="Femme" id="femme" ngModel required>
+					<label for="femme">femme</label>
+					</div>
+					
+				</div>
+				
+			</div>
+			<div class="form-group">
+				<label for="commune">Commune</label>
+				<select class="form-control" name="commune" id="commune" ngModel  required>
+					<option value="Plateau" selected="selected" value=''>Selectionneer une commune</option>
+					<option value="Cocody">Cocody</option>
+					<option value="Koumassi">Koumassi</option>
+					<option value="Portbouet">Port-bouet</option>
+					<option value="Treichville">Treichville</option>
+					<option value="Yopougon">Yopougon</option>
+					<option value="Marcory">Marcory</option>
+					<option value="Attecoube">Attécoubé</option>
+					<option value="Adjame">Adjamé</option>
+					<option value="Abobo">Abobo</option>
+					<option value="Anyama">Anyama</option>
+					<option value="Bingerville">Bingerville</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-primary btn-block" [disabled]='inscription.invalid'>Ajouter un utilisateur</button>
+			</div>
+        </form>
+    </div>
+</div>

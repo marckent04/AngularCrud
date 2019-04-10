@@ -1,0 +1,19 @@
+<div class='container'>
+  <h1>Connectez-vous</h1>
+
+<form (ngSubmit)='onSubmit(connexion.value)' #connexion="ngForm">
+  <div class="form-group">
+    <label for="mail">E-mail</label>
+    <input type="email" name="mail" id="mail" class="form-control" placeholder="votre e-mail" ngModel>
+    <small id="helpId" class="text-danger">{{emailErr}}</small>
+  </div>
+  <div class="form-group">
+      <label for="pass">Mot de passe</label>
+      <input type="password"  name="pass" id="pass" class="form-control" placeholder="votre mot de passe" ngModel required>
+      <small id="helpId" class="text-danger">{{mdpErr}}</small>
+    </div>
+    <div class="form-group">
+        <button class='btn btn-info'>Se connecter</button>
+      </div>
+</form>
+</div>
